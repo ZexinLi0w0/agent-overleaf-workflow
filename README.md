@@ -8,15 +8,16 @@ A reference guide for using terminal-based AI coding agents to author and revise
 
 A quick side-by-side of four popular agent CLIs you can use as the "editor" for your Overleaf project.
 
-| Tool | Vendor | Open Source | Pricing (input, $/M tokens)¹ | GUI |
-|---|---|---|---|---|
-| **[Claude Code CLI](https://docs.claude.com/claude-code)** | Anthropic | ❌ Closed (binary) | Sonnet 4.5: **$3** · Opus 4.x: **$15** · Haiku 4.5: **$1** | Terminal only (official VS Code extension) |
-| **[Codex CLI](https://github.com/openai/codex)** | OpenAI | ✅ MIT | GPT-5-Codex: **~$1.25** · GPT-5.3-Codex: **~$1.75** | Terminal only (also web + IDE versions) |
-| **[Antigravity CLI](https://ai.google.dev/gemini-api/docs/antigravity-agent)** | Google | ❌ Closed (preview) | Gemini 3 Pro: **~$2** · Gemini 3 Flash: **$0.50** | Has GUI (Antigravity IDE / agent workspace) |
-| **[OpenClaw](https://github.com/openclaw/openclaw)** | Community (openclaw.ai) | ✅ MIT | BYOK — depends on chosen model² | Web UI + multi-channel (Telegram / Discord / Slack / WhatsApp / iMessage / …) |
+| Tool | Vendor | Open Source | Pricing (input, $/M tokens)¹ | GUI | Flexibility³ |
+|---|---|---|---|---|---|
+| **[Claude Code CLI](https://docs.claude.com/claude-code)** | Anthropic | ❌ Closed (binary) | Sonnet 4.5: **$3** · Opus 4.x: **$15** · Haiku 4.5: **$1** | Terminal only (official VS Code extension) | 🟡 Medium — Anthropic models only; extensible via Skills + MCP servers; sub-agents supported |
+| **[Codex CLI](https://github.com/openai/codex)** | OpenAI | ✅ MIT | GPT-5-Codex: **~$1.25** · GPT-5.3-Codex: **~$1.75** | Terminal only (also web + IDE versions) | 🟡 Medium — OpenAI models only; open-source code editable; MCP support |
+| **[Antigravity CLI](https://ai.google.dev/gemini-api/docs/antigravity-agent)** | Google | ❌ Closed (preview) | Gemini 3 Pro: **~$2** · Gemini 3 Flash: **$0.50** | Has GUI (Antigravity IDE / agent workspace) | 🔴 Low — Google models only; closed preview; limited 3rd-party extension surface |
+| **[OpenClaw](https://github.com/openclaw/openclaw)** | Community (openclaw.ai) | ✅ MIT | BYOK — depends on chosen model² | Web UI + multi-channel (Telegram / Discord / Slack / WhatsApp / iMessage / …) | 🟢 High — model-agnostic (Anthropic / OpenAI / Google / Bedrock / OpenRouter / Ollama / …); skills + plugins + MCP; pluggable channels; cron + multi-agent orchestration |
 
 ¹ Pricing as of early 2026, list price for direct API usage. Subscription tiers (Claude Pro, ChatGPT Plus, Google AI Ultra) bundle quotas differently — see each vendor's pricing page for current rates.
 ² OpenClaw routes to any supported model provider (Anthropic, OpenAI, Google Vertex, Bedrock, OpenRouter, local Ollama, …). You pay the underlying model's rate.
+³ "Flexibility" captures: model lock-in vs. model-agnostic routing, extensibility (skills / plugins / MCP / custom tools), and surface area (terminal-only vs. multi-channel).
 
 ---
 
